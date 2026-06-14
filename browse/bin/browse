@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Resolve through symlinks so the CLI works from ~/.claude/skills/browse too.
+SOURCE="${BASH_SOURCE[0]}"
+while [ -L "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ "$SOURCE" != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DIR="$(cd -P "$(dirname "$SOURCE")/.." && pwd)"
+exec node "$DIR/browse.mjs" "$@"

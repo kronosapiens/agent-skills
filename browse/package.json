@@ -1,0 +1,11 @@
+{
+  "name": "browse",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Persistent headless-Chrome CLI for screenshots and QA of local/live web apps.",
+  "bin": { "browse": "./bin/browse" },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
