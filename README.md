@@ -8,8 +8,10 @@ Home-spun agent skills
 
 ## Install
 
-Symlink a skill into `~/.claude/skills/` so Claude Code discovers it, then run any one-time setup from its `SKILL.md`:
+Run `install.sh` to symlink every skill in this repo into `~/.claude/skills/` so Claude Code discovers them, then run any one-time setup from each `SKILL.md`:
 
 ```bash
-ln -s "$PWD/browse" ~/.claude/skills/browse
+./install.sh
 ```
+
+The script is idempotent — re-run it after adding a skill. Override the target dir with `CLAUDE_SKILLS_DIR`.
