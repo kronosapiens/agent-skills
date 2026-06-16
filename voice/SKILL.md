@@ -48,19 +48,29 @@ If the register doesn't match a file, ask which register fits, or fall back to t
 
 ## Voice core (the constant)
 
-> **Status: not yet calibrated.** Until this is filled in, derive the voice from the samples in the relevant register file and lean conservative.
-> Fill these in from real samples over time; keep each claim specific enough to act on.
+> Triangulated so far mainly from **technical essays**.
+> The deliberate-moves overrides below are confirmed identity-level (they predate AI).
+> Treat the four dimensions as likely-constant but provisional until email and LinkedIn add their own samples.
 
-- **Voice (how it sounds):** _TODO — the stable personality across everything._
-- **Tone (attitude / warmth):** _TODO._
-- **Style (word & sentence choices):** _TODO — diction, sentence length, rhythm, punctuation habits._
-- **Structure (how ideas are ordered):** _TODO — how arguments open, build, and close._
-- **Signature moves:** _TODO — the moves that are recognizably the user's._
-- **Recurring themes / values:** _TODO — what the writing keeps returning to._
+- **Voice (how it sounds):** First person ("I") for personal stakes and narrative entry; shifts to inclusive "we" when developing an argument. Educated but never stuffy — academic rigor with blogger directness. The reader is an intelligent peer, not a student.
+- **Tone:** Intellectually confident, not arrogant — states positions clearly and acknowledges uncertainty directly, without hedge-word pileups. Dry, understated humor, sparingly. Enthusiasm for ideas and systems, never for personalities or trends. Argues through analysis and evidence; does not moralize.
+- **Style:** Medium-long sentences with internal complexity (embedded clauses, parentheticals, appositives), broken by short punchy sentences for emphasis. Italics for term introduction and conceptual emphasis. No exclamation points. Cross-domain analogy as a habit of mind; coins compact metaphor-labels rather than padding.
+- **Structure:** Claim-then-unpack; assertion–concession–restatement for contested points. Openings establish stakes through context, not hooks. Closings synthesize at a higher level of abstraction with qualified affirmation (hopeful, immediately tempered) — never a mechanical summary.
+- **Signature moves:** The "ontological" lens (what does this model assume about reality?); historical grounding via named figures + years; intuition before formalism; bold inline "headlines" within paragraphs; honest concession of an argument's limits; personal-stake disclosure.
+- **Recurring themes / values:** Governance, mechanism design, social choice, capital allocation; technology in service of human coordination; cybernetic, self-correcting processes over static point solutions.
+
+### Deliberate moves (override the banned tics below)
+
+These are genuine voice, not slop — they predate AI. Never strip them. Intensity varies by register.
+
+- **Em dashes** — signature punctuation, for interjection and emphasis.
+- **Rhetorical questions** — to pivot between sections.
+- **Parallel enumeration** — when the content is genuinely parallel.
+- **"Said another way" restatement** — to land a key point.
 
 ## Banned tics (the negative anchor)
 
-These are the generic-AI tells. Avoid them in every register regardless of the profile above.
+These are the generic-AI tells. Avoid them in every register regardless of the profile above — **except** the deliberate moves in the voice core, which are genuine voice. These bans target *unconscious* slop, not those deliberate moves.
 
 - The "**it's not just X, it's Y**" / "not only… but also" reframe, and contrast-for-effect symmetry.
 - **Reflexive tricolons** and rule-of-three lists where two items (or five) would be honest.
@@ -68,7 +78,7 @@ These are the generic-AI tells. Avoid them in every register regardless of the p
 - **Hype diction:** delve, leverage (as filler), tapestry, realm, underscore, robust, seamless, unlock, harness, navigate the complexities, game-changer.
 - **Throat-clearing:** "It's worth noting that," "It's important to note," "Needless to say."
 - **Empty closers:** an "Ultimately," / "At the end of the day" paragraph that just restates the piece; rhetorical-question-then-answer endings; "In conclusion."
-- **Em-dash overuse** and the "—and that's okay" cadence.
+- The "—and that's okay" cadence. (Deliberate em-dash use is genuine voice — see the voice core.)
 - **Symmetry and parallelism for their own sake** when the content isn't actually parallel.
 - Title-case headers, emoji bullets, or bolded label-lists unless a sample shows the user actually writes that way.
 
