@@ -305,10 +305,17 @@ async function runDaemon() {
       case "screenshot": {
         let sel = null,
           out = null,
-          full = false;
-        for (const a of rest) {
+          full = false,
+          clip = null;
+        for (let i = 0; i < rest.length; i++) {
+          const a = rest[i];
           if (a === "--full") full = true;
-          else if (a.endsWith(".png") || a.includes("/") || a.startsWith("~")) out = expand(a);
+          else if (a === "--clip") {
+            const c = (rest[++i] || "").split(",").map(Number);
+            if (c.length === 4 && c.every((n) => Number.isFinite(n))) {
+              clip = { x: c[0], y: c[1], width: c[2], height: c[3] };
+            } else throw new Error("--clip expects x,y,w,h");
+          } else if (a.endsWith(".png") || a.includes("/") || a.startsWith("~")) out = expand(a);
           else sel = a;
         }
         out = out || path.join(SHOT_DIR, `shot-${Date.now()}.png`);
@@ -318,7 +325,7 @@ async function runDaemon() {
           if (!el) throw new Error("not found: " + sel);
           await el.screenshot({ path: out });
         } else {
-          await page.screenshot({ path: out, fullPage: full });
+          await page.screenshot({ path: out, fullPage: full, ...(clip ? { clip } : {}) });
         }
         return { out };
       }
@@ -413,7 +420,7 @@ act      click <sel> · hover <sel> · fill <sel> <val> · type <text> · press 
          select <sel> <val> · scroll [sel]
 find     snapshot [-i]            list interactive elements as @e refs
 assert   is <visible|hidden|enabled|disabled|checked|editable|focused> <sel>
-shots    screenshot [sel] [path] [--full]
+shots    screenshot [sel] [path] [--full] [--clip x,y,w,h]
          responsive [prefix]      mobile + tablet + desktop
 inspect  console [--errors|--clear] · network [--clear]
 view     viewport <WxH> · wait <sel|--load|--networkidle>
